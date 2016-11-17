@@ -30,6 +30,7 @@
 			<property name="hibernate.hbm2ddl.auto">create</property>
 			
 			<mapping class="com.mastere.metier.Utilisateur"/>
+			<mapping class="com.mastere.metier.Groupe"/>
 			<!--  <mapping package="com.mastere.metier"/>-->
 		</session-factory>
 	</hibernate-configuration>
