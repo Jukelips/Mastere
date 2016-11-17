@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mastere.dao.UtilisateurDAO;
+
 /**
  * Servlet implementation class ServletUtilisateur
  */
@@ -27,6 +29,7 @@ public class ServletUtilisateur extends UtilHttpServlet implements Servlet {
 		final String action = request.getPathInfo();
 		switch (action) {
 		case "/create":
+			request.setAttribute("groupes", UtilisateurDAO.getAllGroupe());
 			afficherVue("create", request, response);
 			break;
 

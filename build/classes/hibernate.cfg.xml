@@ -27,7 +27,7 @@
 			<property name="show_sql">true</property>
 			
 			<!-- génération auto de la base -->
-			<property name="hibernate.hbm2ddl.auto">create</property>
+			<property name="hibernate.hbm2ddl.auto">update</property>
 			
 			<mapping class="com.mastere.metier.Utilisateur"/>
 			<mapping class="com.mastere.metier.Groupe"/>
