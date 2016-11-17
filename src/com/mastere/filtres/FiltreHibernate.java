@@ -23,15 +23,15 @@ public class FiltreHibernate implements Filter{
 	public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)
 			throws IOException, ServletException {
 		arg2.doFilter(arg0, arg1);
-		//try {
+		try {
 			if (HibernateUtil.getSession().getTransaction().getStatus() == TransactionStatus.ACTIVE)
 				HibernateUtil.getSession().getTransaction().commit();
-		/*} catch (Exception e) {
+		} catch (Exception e) {
 			HibernateUtil.getSession().getTransaction().rollback();
 		}finally {
 			if (HibernateUtil.getSession().isOpen())
 				HibernateUtil.getSession().close();
-		}*/	
+		}	
 	}
 	
 	@Override
